@@ -19,8 +19,12 @@ def parse_arguments():
 
     return args
 
-lang_cluster = ['c++', 'java', 'python', 'c', 'c#', 'ruby', 'delphi', 'go',
-                'javascript', 'kotlin', 'php', 'd', 'perl', 'rust']
+# lang_cluster = ['c++', 'java', 'python', 'c', 'c#', 'ruby', 'delphi', 'go',
+#                 'javascript', 'kotlin', 'php', 'd', 'perl', 'rust']
+
+lang_cluster = ['c++', 'java', 'python', 'c', 'c#', 'ruby', 'go',
+                'javascript', 'kotlin', 'php', 'rust']
+
 
 @retry.Retry()
 def generate_text(*args, **kwargs):
