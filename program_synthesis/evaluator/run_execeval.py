@@ -48,9 +48,14 @@ def main(args):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--codes_dir', type=str, default='../inference/results', help='The folder where you store your code files')
-    parser.add_argument('--results_dir', type=str, default='execute_results/', help='The folder where you store your run results')
-    parser.add_argument('--code_filename', type=str, default='program_synthesis_eval_gpt4.jsonl', help='code data')
+    # parser.add_argument('--codes_dir', type=str, default='../inference/results', help='The folder where you store your code files')
+    # parser.add_argument('--results_dir', type=str, default='execute_results/', help='The folder where you store your run results')
+    # parser.add_argument('--code_filename', type=str, default='program_synthesis_eval_gpt4.jsonl', help='code data')
+    parser.add_argument('--codes_dir', type=str,  help='The folder where you store your code files')
+    parser.add_argument('--results_dir', type=str, help='The folder where you store your run results')
+    parser.add_argument('--code_filename', type=str, default='program_synthesis_eval_palm.jsonl', help='code data')
 
     args = parser.parse_args()
     main(args)
+
+# python run_execeval.py --codes_dir your_codes/ --results_dir results --code_filename your_codes.jsonl
