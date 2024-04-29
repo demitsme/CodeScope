@@ -69,15 +69,17 @@ def main():
     dir_name = args.result_dir
     name = args.model_name
 
-    results_path = dir_name + "program_synthesis_eval_" + name + ".jsonl"
-    results_perl_path = dir_name + "program_synthesis_eval_" + name + "_perl.json"
-    results_d_path = dir_name + "program_synthesis_eval_" + name + "_d.json"
-    results_delphi_path = dir_name + "program_synthesis_eval_" + name + "_delphi.json"
+    # results_path = dir_name + "program_synthesis_eval_" + name + ".jsonl"
+    results_path = "resultsyour_codes.jsonl"
+    # results_perl_path = dir_name + "program_synthesis_eval_" + name + "_perl.json"
+    # results_d_path = dir_name + "program_synthesis_eval_" + name + "_d.json"
+    # results_delphi_path = dir_name + "program_synthesis_eval_" + name + "_delphi.json"
 
     support_lang_clusters = ['C++', 'Java', 'Python', 'C', 'C#', 'Ruby', 'Go', 'JavaScript', 'Kotlin', 'PHP', 'Rust',
                              'Perl', 'D', 'Delphi']
 
-    count_passed_problems(support_lang_clusters, results_path, results_perl_path, results_d_path, results_delphi_path)
+    # count_passed_problems(support_lang_clusters, results_path, results_perl_path, results_d_path, results_delphi_path)
+    count_passed_problems(support_lang_clusters, results_path)
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()

@@ -24,9 +24,23 @@ def add_exec_outcome(example):
         source_code=source_code,
         unittests=unittests
     )
-    print(response)
-
-    example['exec_outcome'] = response[0]
+    
+    if response[0] == []:
+        print('empty')
+    
+    # print(type(response))
+    # print(type(response[0]))
+    # print(type([response[0]]))
+    if isinstance(response[0], list):
+    # example['exec_outcome'] = response[0]
+        example['exec_outcome'] = response[0]
+    elif isinstance(response[0], dict):
+        example['exec_outcome'] = [response[0]]
+    else:
+        print(type(response[0]))
+        print('else case : ',response,'tef',response[0])
+        example['exec_outcome'] = []
+    
 
     return example
 

@@ -69,7 +69,7 @@ class APICommunication:
         unittests: List[dict],
         limits: Optional[dict] = None,
         block_network: bool = True,
-        stop_on_first_fail: bool = True,
+        stop_on_first_fail: bool = True, #SET TO False if u want to execute all
         use_sanitizer: bool = False,
         compiler_program_name: Optional[str] = None,
         compiler_flags: Optional[str] = None,
