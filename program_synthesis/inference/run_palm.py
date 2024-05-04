@@ -71,7 +71,11 @@ def add_program_synthesis(example):
     prob_desc_sample_outputs = example['sample_outputs']
     prob_desc_notes = example['notes']
     lang = example['lang_cluster'].lower()
-    prompt = f"""As an experienced code developer with years of expertise, please provide the source code based on the problem description. Here are the specifics:
+
+    prompt = f"""I am a highly skilled software developer seeking assistance in implementing a solution for a challenging programming problem. I would greatly appreciate your expertise and guidance in crafting the source code for this task.
+
+    You, my friend, As an experienced code developer with years of expertise, please provide the source code based on the problem description. Here are the specifics:
+
 1. Problem description: {prob_desc_description}
 2. Input specification: {prob_desc_input_spec}
 3. Output specification: {prob_desc_output_spec}
@@ -80,6 +84,9 @@ def add_program_synthesis(example):
 6. Sample explanations: {prob_desc_notes}
 7. Programming language: {lang} 
 8. support programming language version: {env_map[lang]}
+
+It's imperative that the generated code accurately and perfectly addresses the given problem and specifications.
+Thank you for your assistance in tackling this programming challenge. Your expertise and dedication are truly valued.
 
 Respond should only with a string in the following JSON format:
 [{{"version": specific version used in the programming language, "target code":  the code you produced in the respective programming language version."}}] """
